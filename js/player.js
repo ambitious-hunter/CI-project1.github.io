@@ -36,7 +36,7 @@ $(document).on('click touchend', '.speaker', function() {
   console.log("Music is not playing");
   if (audiostatus == 'off') {
    $('.speaker').addClass('speakerplay');
-   $('.speaker').css('background-image', 'url(../img/music/pause.png)');
+   $('.speaker').css('background-image', 'url(https://raw.githubusercontent.com/atarutina/CI-project1.github.io/gh-pages/img/music/pause.png)');
    getaudio = $("#" + $(this).attr("for"))[0];
    //.log(getaudio);
    getaudio.load();
@@ -46,7 +46,7 @@ $(document).on('click touchend', '.speaker', function() {
    return false;
  } else if (audiostatus == 'on') {
   $('.speaker').removeClass('speakerplay');
-  $('.speaker').css('background-image', 'url(../img/music/play.png)');
+  $('.speaker').css('background-image', 'url(https://raw.githubusercontent.com/atarutina/CI-project1.github.io/gh-pages/img/music/play.png)');
   getaudio.pause();
   audiostatus = "off";
  }
@@ -54,7 +54,7 @@ $(document).on('click touchend', '.speaker', function() {
   //console.log("Music was playing");
   getaudio.pause();
   $('.speaker').removeClass('speakerplay');
-  $('.speaker').css('background-image', 'url(../img/music/play.png)');
+  $('.speaker').css('background-image', 'url(https://raw.githubusercontent.com/atarutina/CI-project1.github.io/gh-pages/img/music/play.png)');
   window.clearTimeout(mouseovertimer);
   audiostatus = 'off';
 }
@@ -63,7 +63,7 @@ $(document).on('click touchend', '.speaker', function() {
 $('#player').on('ended', function() {
   $('.speaker').removeClass('speakerplay');
   /*When the audio has finished playing, remove the class speakerplay*/
-  $('.speaker').css('background-image', 'url(../img/music/play.png)');
+  $('.speaker').css('background-image', 'url(https://raw.githubusercontent.com/atarutina/CI-project1.github.io/gh-pages/img/music/play.png)');
   audiostatus = 'off';
   /*Set the status back to off*/
 });
